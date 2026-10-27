@@ -6,7 +6,7 @@
 
 cmake_minimum_required(VERSION 3.5.1)
 
-project(libgit2 VERSION "1.9.0" LANGUAGES C)
+project(libgit2 VERSION "2.0.0" LANGUAGES C)
 
 # Add find modules to the path
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
@@ -95,20 +95,20 @@ endif()
 # Modules
 
 include(FeatureSummary)
+include(AddCFlagIfSupported)
+include(EnableWarnings)
+include(DefaultCFlags)
 include(CheckLibraryExists)
 include(CheckFunctionExists)
 include(CheckSymbolExists)
 include(CheckStructHasMember)
 include(CheckPrototypeDefinitionSafe)
-include(AddCFlagIfSupported)
 include(FindPkgLibraries)
 include(FindThreads)
 include(FindStatNsec)
 include(Findfutimens)
 include(GNUInstallDirs)
 include(IdeSplitSources)
-include(EnableWarnings)
-include(DefaultCFlags)
 include(ExperimentalFeatures)
 
 
